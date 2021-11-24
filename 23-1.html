@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-  <script>
-      var a =29;
-      var j=0;
-     
-      if(a<0){
-          j=0;
+  </head>
+  <body>
+    <script>
+      var a = 100;//Assigning Value
+      var result;//Initializing value for result  
+
+      if (a < 2) {                                                           //conditions for if clause  
+       result="Non prime";                                                   //1->If the number is lesser than zero then its non-prime
       }
-    else if (a>1){
-    for(var i=2;i<a;i++){
- 
-        if(a%i==0){
-           var result="Non prime";
-           break;
+   else if (a > 1) {                                                         //2.If number is greater than 1
+        for (var i = 2; i < a; i++) {                                           //2.1.1-> Create a loop from 2 to a
+          if (a % i == 0) {                                                     //2.1.2->if the remainder comes from a and loop i is equal to zero
+            result = "Non prime";                                               //2.1.3-> Then its non-prime
+            break;                                                              //2.1.4->Loop break  
+      } else {                                                              //2.2->If remainder is not zero,
+           result = "Prime";                                                    //2.2.1->Then the result value is prime
+          }
         }
-        else{
-           var result="Prime";
-        }
+        console.log(result);
       }
-    console.log(result);
-    }
-     </script>  
-</body>
+    </script>
+  </body>
 </html>
